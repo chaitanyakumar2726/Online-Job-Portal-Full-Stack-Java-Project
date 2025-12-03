@@ -1,0 +1,24 @@
+job-portal/
+├─ pom.xml
+├─ src/main/java/com/jobportal/
+│  ├─ JobPortalApplication.java
+│  ├─ config/
+│  │   ├─ SecurityConfig.java
+│  │   └─ JwtUtil.java
+│  ├─ controller/
+│  │   ├─ AuthController.java
+│  │   ├─ UserController.java
+│  │   ├─ JobController.java
+│  │   └─ ApplicationController.java
+│  ├─ dto/
+│  ├─ model/
+│  ├─ repository/
+│  ├─ service/
+│  └─ util/
+├─ src/main/resources/
+│  ├─ application.properties
+│  └─ static/
+│      ├─ index.html
+│      ├─ css/
+│      └─ js/
+└─ README.md

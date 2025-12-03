@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Job Portal</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Job Portal</h1>
+
+    <div id="auth">
+      <h3>Register</h3>
+      <input id="regUser" placeholder="username"><input id="regPass" type="password" placeholder="password">
+      <select id="regRole"><option value="JOB_SEEKER">Job Seeker</option><option value="EMPLOYER">Employer</option></select>
+      <button onclick="register()">Register</button>
+      <hr>
+      <h3>Login</h3>
+      <input id="loginUser" placeholder="username"><input id="loginPass" type="password" placeholder="password">
+      <button onclick="login()">Login</button>
+      <div id="loginMsg"></div>
+    </div>
+
+    <div id="app" style="display:none">
+      <div>Logged in as <span id="who"></span> <button onclick="logout()">Logout</button></div>
+      <hr>
+      <div id="employerPanel" style="display:none">
+        <h3>Create Job</h3>
+        <input id="jobTitle" placeholder="title"><input id="jobCompany" placeholder="company"><input id="jobLocation" placeholder="location"><input id="jobSalary" placeholder="salary">
+        <textarea id="jobDesc" placeholder="description"></textarea>
+        <button onclick="createJob()">Create Job</button>
+        <h4>My Jobs</h4>
+        <div id="myJobs"></div>
+      </div>
+
+      <h3>Jobs</h3>
+      <input id="q" placeholder="search"><button onclick="listJobs()">Search</button>
+      <div id="jobs"></div>
+
+      <div id="applyPanel" style="display:none">
+        <h3>Apply to Job <span id="applyJobId"></span></h3>
+        <input type="file" id="resume"><textarea id="cover"></textarea>
+        <button onclick="applyToJob()">Submit Application</button>
+      </div>
+
+      <h3>My Applications</h3>
+      <div id="myApps"></div>
+    </div>
+
+  </div>
+<script src="/static/js/app.js"></script>
+</body>
+</html>
